@@ -1,0 +1,159 @@
+body{
+  font-family: 'Open Sans',sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+//common heading para styles
+.heading{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.para{
+  font-family: inherit;
+  font-weight: inherit;
+}
+//navigation items
+.nav__item{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+}
+//buttons
+.btn{
+  &,
+  &:link,
+  &:visited{
+    font-family: 'Raleway',sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+  &-subscribe{
+    &,
+    &:link,
+    &:visited{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.btn-info{
+  &,
+  &:link,
+  &:visited{
+    font-family: 'Open Sans',sans-serif;
+    font-size: inherit;
+
+    @include respond(tab-land){
+          font-size: 1.6rem;
+    }
+  }
+}
+
+
+//intro section
+.intro{
+  &__heading{
+    font-size: 3rem;
+    line-height: inherit;
+    @include respond(tab-port){
+      font-size: 4rem;
+    }
+  }
+  &__para{
+    font-size: 1.8rem;
+    @include respond(tab-port){
+      font-size: 2rem;
+    }
+  }
+}
+
+//features section
+.features{
+  &__heading{
+    font-size: 2.25rem;
+    line-height: inherit;
+    @include respond(tab-port){
+      font-size: 2rem;
+    }
+  }
+  &__para{
+    font-size: 1.8rem;
+    font-weight: inherit;
+
+    @include respond(tab-port){
+      font-size: inherit;
+    }
+  }
+}
+
+//info section
+.info{
+  &__heading{
+    font-size: 2.3rem;
+    @include respond(small-desktop){
+      font-size: 4rem;
+      line-height: 1.25;
+    }
+  }
+
+  &__para{
+    font-size: 1.75rem;
+    // @include respond(phone-lg){
+    //   font-size: 1.6rem;
+    // }
+    @include respond(tab-port){
+        font-size: inherit;
+    }
+  }
+}
+
+//testimonials section
+.testimonials{
+  &__para{
+    font-size: inherit;
+    line-height: 1.45;
+
+    @include respond(small-desktop){
+      font-size: 1.49rem;
+    }
+  }
+
+  &__name{
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  &__position{
+    font-size: .9rem;
+  }
+}
+
+
+//cta section
+.cta{
+  &__heading{
+    font-size: 2.25rem;
+    @include respond(tab-port){
+      font-size: 3.2rem;
+    }
+  }
+
+  &__para{
+    font-size: 1.75rem;
+    @include respond(tab-port){
+      font-size: inherit;
+    }
+  }
+}
+
+//footer
+.footer{
+  font-size: 1.7rem;
+  @include  respond(tab-land){
+    font-size: 1.6rem;
+  };
+  &__directory{
+    font-size: 1.4rem;
+  }
+}

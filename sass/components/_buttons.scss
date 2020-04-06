@@ -1,0 +1,65 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    height: 5.8rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 28rem;
+    text-decoration: none;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    background-image: linear-gradient(to bottom right, var(--color-secondary-light), var(--color-secondary-dark));
+    color: var(--color-neutral);
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &-subscribe {
+    &,
+    &:link,
+    &:visited {
+      height: 5.2rem;
+      width: 100%;
+      @include respond(tab-port) {
+        width: 20rem;
+      }
+    }
+  }
+}
+
+.btn-info {
+  &,
+  &:link,
+  &:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+    color: var(--color-secondary-light);
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 0.3rem;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+}

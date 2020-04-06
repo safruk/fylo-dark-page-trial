@@ -1,0 +1,448 @@
+//intro section with cta button
+.intro {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-primary);
+  background-image: url('../images/bg-curvy-mobile.svg'), linear-gradient(to bottom, var(--color-primary) 10%,var(--color-primary) 59%, var(--color-primary-main) 59%);  //around 60%
+  // background-image: url('../images/bg-curvy-mobile.svg'), linear-gradient(to bottom right, var(--color-primary), var(--color-primary-main) );
+  // background-image: url('../images/bg-curvy-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: 100%;
+  height: auto;
+  & > :not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  @include respond(phone-lg) {
+    padding: 6rem 0;
+    background-image: url('../images/bg-curvy-mobile.svg'),
+                     linear-gradient(to bottom, var(--color-primary) 10%,var(--color-primary) 79%, var(--color-primary-main) 79%);  //around 80%
+    background-position: center 75%;
+  }
+  @include respond(tab-port) {
+    background-image: url('../images/bg-curvy-desktop.svg'),
+                      linear-gradient(to bottom, var(--color-primary) 10%,var(--color-primary) 79.5%, var(--color-primary-main) 79.5%);  //around 80%
+    background-position: center 75%;
+    & > :not(:last-child) {
+      margin-bottom: 3.2rem;
+    }
+  }
+  @include respond(tab-land){
+    background-image: url('../images/bg-curvy-desktop.svg'),
+                      linear-gradient(to bottom, var(--color-primary) 10%,var(--color-primary) 82%, var(--color-primary-main) 82%);  //around 80%
+    background-position: center 75%;
+  }
+  @include respond(small-desktop){
+     background-image: url('../images/bg-curvy-desktop.svg');
+    background-position: center 100%;
+  };
+  &__img {
+    display: block;
+    max-width: 38rem;
+    width: 100%;
+    animation: moveInLeft 1s;
+    @include respond(tab-port) {
+      max-width: 72rem;
+    };
+  }
+
+  &__heading {
+    max-width: 38rem;
+    width: 100%;
+    @include respond(tab-port) {
+      max-width: 72rem;
+      animation: moveInRight 1s;
+    }
+  }
+
+  &__para {
+    max-width: 38rem;
+    width: 100%;
+    animation: moveInRight 1s;
+    @include respond(tab-port) {
+      max-width: 63rem;
+    }
+  }
+}
+//features section
+
+.features {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 8rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: var(--color-primary-main);
+  @include respond(tab-land) {
+    max-width: 90%;
+    padding: 6rem 8rem;
+      justify-content: space-between;
+  }
+  @include respond(small-desktop){
+    max-width: 80%;
+  }
+
+  &__card{
+    padding: 5.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    &> *{
+      max-width: 41rem;
+    }
+    @include respond(tab-port){
+        flex: 0 0 50%;
+          padding: 4.5rem 3rem 4rem;
+          &> *{
+            max-width: 38rem;
+          }
+    };
+  }
+  &__image-container{
+    height: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 3rem;
+    @include respond(tab-port){
+      margin-bottom: 2rem;
+    }
+  }
+  &__image{
+    width: 80%;
+
+    @include respond(tab-port){
+      width: 100%;
+    }
+  }
+
+  &__heading{
+    margin-bottom: .5rem;
+  }
+}
+
+//info section
+
+.info{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 5.5rem 3rem 7rem 3.5rem;
+
+  @include respond(tab-port){
+    padding: 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    & > *{
+      flex: 0 1 50%;
+    //  padding: 3rem 0 3rem 2rem;
+    }
+  }
+  @include respond(tab-land){
+    padding: 3.5rem 11rem;
+  };
+
+  &__img{
+    max-width: 100%;
+  }
+
+  &__text{
+    margin: auto;
+    // padding: 10rem;
+    @include respond(small-desktop){
+      padding-top:4rem;
+    }
+    &> :not(:last-child){
+      margin-bottom: 2rem;
+    }
+
+    @include respond(tab-port){
+        padding-left: 2.5rem;
+    }
+    @include respond(tab-land){
+      padding-left: 5.75rem;
+    }
+  }
+  &__heading{
+    @include respond(small-desktop){
+        max-width: 40rem;
+    }
+  }
+  &__arrow{
+    margin-left: .5rem;
+  }
+
+  &__icon{
+    display: block;
+  }
+}
+
+
+//testimonials section
+
+.testimonials{
+  max-width: 38rem;
+  margin: 10.25rem auto 0;
+  padding: 3.75rem 1rem;
+  background-image: url('../images/bg-quotes.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > *{
+    margin-bottom: 4rem;
+  }
+  @include respond(tab-land){
+    display: flex;
+    flex-direction: row;
+max-width: 95%;
+& > *{
+  margin-bottom: 1rem;
+}
+& > :not(:last-child){
+  margin-right: 4rem;
+}
+  }
+  @include respond(small-desktop){
+  max-width: 82%;
+
+  }
+  &__card{
+    padding: 3.75rem 2.5rem 2.8rem;
+    // max-width: 42rem;
+    background-color: var(--color-primary-testimonial);
+    border-radius: .5rem;
+    box-shadow: 1rem .5rem 1rem rgba(0,0,0, .8);
+
+    &> :not(:last-child){
+      margin-bottom: 2rem;
+    }
+
+  }
+  &__profile{
+    display: flex;
+    align-items: center;
+    & > :not(:last-child){
+      margin-right: .5rem;
+    }
+  }
+  // &__para{
+  //
+  // }
+  &__photo-block{
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  &__photo{
+    display: block;
+      border-radius: 50%;
+    width: 100%;
+  }
+  // &__name-block{
+  //
+  // }
+  // &__name{
+  //
+  // }
+  &__position{
+      color: var(--color-primary-light);
+  }
+}
+
+//cta section
+.cta-wrapper{
+  width: 100%;
+  background:linear-gradient(to bottom, var(--color-primary-main),var(--color-primary-main) 50%, var(--color-primary-footer) 50%);
+
+  @include respond (tab-port){
+    background:linear-gradient(to bottom, var(--color-primary-main),var(--color-primary-main) 60%, var(--color-primary-footer) 60%);
+
+  }
+  padding: 3rem 0;
+}
+.cta{
+  padding: 3.5rem;
+  background-color: var(--color-primary-testimonial);
+  border-radius: .5rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,1);
+  max-width: 90%;
+  margin: 11rem auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @include respond(tab-land){
+    max-width: 86rem;
+      padding: 5rem 7rem 2rem;
+  }
+  &__heading{
+    margin-bottom: 2rem;
+  }
+  &__para{
+    max-width: 62rem;
+    margin-bottom:3.5rem;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+
+    @include respond(tab-port){
+      flex-direction: row;
+    };
+    & > :not(:last-child){
+      margin-bottom: 2rem;
+    }
+    &__input{
+      outline: transparent;
+      border: transparent;
+      color: var(--color-primary);
+      border-radius: 10rem;
+      padding: 1.75rem 3rem;
+      flex: 1;
+
+      @include respond(tab-port){
+          margin-right: 3rem;
+          padding: 0 3rem;
+          height: 5.2rem;
+      }
+    }
+    &__input:focus,
+    &__input:active{
+      outline: transparent;
+      border: transparent;
+    }
+  }
+}
+
+
+//footer
+
+.footer{
+  padding: 4rem;
+  background-color: var(--color-primary-footer);
+  &>:not(:last-child){
+    margin-bottom: 3rem;
+  }
+  @include respond(small-desktop){
+    padding: 5rem 8rem 2rem 12rem;
+  }
+
+
+  &__info{
+
+    &>:not(:last-child){
+      margin-bottom: 4rem;
+    }
+
+    @include respond(tab-land){
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+          // flex-wrap: wrap;
+    }
+  }
+  &__address{
+    display: flex;
+    align-items: flex-start;
+
+    &>:not(:last-child){
+      margin-right: 2rem;
+    }
+  }
+  &__icon-block{
+    height: 2rem;
+    width: 2rem;
+    margin-top: .5rem;
+    display: flex;
+    align-items: flex-start;
+  }
+  // &__icon{
+  //   // width: 100%;
+  // }
+  &__para{
+    max-width: 40rem;
+    @include respond(tab-land){
+        max-width: 32.5rem;
+    }
+  }
+
+  &__heading{
+    max-width: 40rem;
+  }
+  // &__directory{
+  //
+  // }
+  // &__directory,
+  // &__menu,
+  // &__security{
+  //
+  // }
+
+
+  // &__menu{
+  //
+  // }
+
+  // &__security{
+  //
+  // }
+
+  &__list{
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+    &>:not(:last-child){
+      margin-bottom: 1.5rem;
+    }
+    &__item{
+      display: flex;
+      align-items: flex-start;
+      &>:not(:last-child){
+        margin-right: 2rem;
+      }
+    }
+  }
+  &__social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      padding: 1rem;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+    }
+
+    & > :not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+}
+
+//attribution- frontendmentor
+.attribution{
+  color: var(--color-neutral);
+  flex: 1;
+  text-align: center;
+  font-size: 1.3rem;
+}

@@ -1,0 +1,47 @@
+//header section with logo & navigation menu
+.header{
+  background-color: var(--color-primary);
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: moveInBottom 1s;
+  @include respond(tab-port){
+    padding: 7rem 8rem 1.5rem;
+  }
+//   &__logo-container{
+// //add if necessary
+//   }
+
+  &__logo{
+    height: 2.8rem;
+
+    @include respond(phone-lg){
+      height: 4rem;
+    }
+    @include respond(tab-port){
+      height: 5.2rem;
+    }
+  }
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > :not(:last-child){
+    margin-right: 3rem;
+  }
+
+  @include respond(tab-port){
+    & > :not(:last-child){
+        margin-right: 6rem;
+    }
+
+  }
+  //   &__item{
+  //     display: flex;
+  //     justify-content: center;
+  //    align-items: center;
+  // }
+}
